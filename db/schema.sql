@@ -4,11 +4,3 @@ DROP DATABASE IF EXISTS stack_underflow_db;
 -- CREATE DATABASE
 CREATE DATABASE stack_underflow_db;
 
--- -- USE
--- USE 
-
--- -- DROP TABLE
--- DROP TABLE IF EXISTS
--- DROP TABLE IF EXISTS
--- DROP TABLE IF EXISTS
- 
