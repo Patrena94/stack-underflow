@@ -34,7 +34,7 @@ router.get('/topCommenters', (req, res) => {
       .then(dbCommentData => {
         const topCommenters = dbCommentData.map(comment => comment.get({ plain: true }))
         console.log(topCommenters)
-        res.render('search', topCommenters)})
+        res.render('search', {topCommenters})})
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -59,7 +59,10 @@ router.get('/topCommenters', (req, res) => {
        order: [[sequelize.literal('num_posts','User.id'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
     }
     )
-      .then(dbPostData => res.render('search'))
+      .then(dbPostData => {
+        const topCreators = dbPostData.map(post => post.get({ plain: true }))
+        res.render('search', {topCreators})
+      })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);

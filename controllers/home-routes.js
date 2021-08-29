@@ -98,14 +98,4 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// router.get('/search/:option', (req,res)=>{
-//   console.log('======================');
-//   console.log("REQ Parms", req.params.option)
-
-
-//   res.render('search')
-  
-  
-// })
-
 module.exports = router;
