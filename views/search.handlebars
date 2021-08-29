@@ -1,0 +1,18 @@
+<form class="search-form">
+  <div class="search">
+    <label for="search-type">Choose a Search Option</label>
+
+    <select name="search-type" id="search-type">
+      <option value="">Select One</option>
+      <option value="topCreators">List Top Creators</option>
+      <option value="topCommenters">List Top Commenters</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit">Search</button>
+  </div>
+</form>
+
+{{> topComments search.topComments}}
+
+<script src="/javascript/main.js"></script>

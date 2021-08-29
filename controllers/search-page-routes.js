@@ -1,11 +1,21 @@
+
+
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-const { Post, User, Comment, Vote } = require('../../models');
-const withAuth = require('../../utils/auth');
+const sequelize = require('../config/connection');
+const { Post, User, Comment, Vote } = require('../models');
+
+
+router.get('/', (req,res)=>{
+    console.log('======================');
+    res.render('search')
+    
+    
+})
 
 // get all users
 router.get('/topCommenters', (req, res) => {
     console.log('======================');
+    console.log('Search Top Commenters');
     User.findAll({
       attributes: [
           'id', 
@@ -21,7 +31,10 @@ router.get('/topCommenters', (req, res) => {
        order: [[sequelize.literal('num_comments'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
     }
     )
-      .then(dbCommentData => res.json(dbCommentData))
+      .then(dbCommentData => {
+        const topCommenters = dbCommentData.map(comment => comment.get({ plain: true }))
+        console.log(topCommenters)
+        res.render('search', topCommenters)})
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -30,6 +43,7 @@ router.get('/topCommenters', (req, res) => {
 
   router.get('/topCreators', (req, res) => {
     console.log('======================');
+    console.log('Search Top Creators');
     User.findAll({
       attributes: [
           'id', 
@@ -45,7 +59,7 @@ router.get('/topCommenters', (req, res) => {
        order: [[sequelize.literal('num_posts','User.id'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
     }
     )
-      .then(dbPostData => res.json(dbPostData))
+      .then(dbPostData => res.render('search'))
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
