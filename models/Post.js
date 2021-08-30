@@ -80,7 +80,8 @@ Post.init(
       },
     },
     post_text: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
+      defaultValue: "Insert Post Details",
       allowNull: false,
     },
   },
