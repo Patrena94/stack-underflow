@@ -7,17 +7,22 @@ class Language extends Model{}
 Language.init(
     {
     id:{
-    Type: DataTypes.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoincrement: true
     },
-    language:{
+    language_name:{
     type: DataTypes.STRING,
     allowNull: false
 }
     },
-)
-
+    {
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'language'
+      }
+      ),
   module.exports=Language;
     

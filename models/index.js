@@ -69,11 +69,11 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id',
 });
 
-Language.belongsto(Post, {
+Language.hasMany(Post, {
   foreignKey: 'language_id',
-  onDelete: 'SET NULL'
+  // onDelete: 'SET NULL'
 });
-Library.belongsto(Post, {
+Library.hasMany(Post, {
   foreignKey: 'library_id', 
   onDelete: 'SET Null'
 })
