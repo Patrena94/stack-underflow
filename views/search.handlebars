@@ -6,7 +6,11 @@
       <option value="">Select One</option>
       <option value="topCreators">List Top Creators</option>
       <option value="topCommenters">List Top Commenters</option>
+      <option value="usersPost">Search User Post</option>
     </select>
+  </div>
+  <div class="additional">
+
   </div>
   <div>
     <button type="submit">Search</button>
@@ -42,6 +46,19 @@
     {{/each}}
   {{/if}}
 
+{{#if this.posts}}
+<h1>Posts By User</h1>
+<section>
+ 
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
 </div>
 
 <script src="/javascript/search.js"></script>

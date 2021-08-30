@@ -15,7 +15,6 @@ router.get('/', (req,res)=>{
 // get all users
 router.get('/topCommenters', (req, res) => {
     console.log('======================');
-    console.log('Search Top Commenters');
     User.findAll({
       attributes: [
           'id', 
@@ -33,7 +32,6 @@ router.get('/topCommenters', (req, res) => {
     )
       .then(dbCommentData => {
         const topCommenters = dbCommentData.map(comment => comment.get({ plain: true }))
-        console.log(topCommenters)
         res.render('search', {topCommenters})})
       .catch(err => {
         console.log(err);
@@ -43,7 +41,6 @@ router.get('/topCommenters', (req, res) => {
 
   router.get('/topCreators', (req, res) => {
     console.log('======================');
-    console.log('Search Top Creators');
     User.findAll({
       attributes: [
           'id', 
@@ -68,5 +65,43 @@ router.get('/topCommenters', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+  router.get('/usersPost/:userName', (req, res) => {
+  console.log('======================');
+
+  Post.findAll({
+    attributes: [
+      'id',
+      'post_url',
+      'title',
+      'created_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username'],
+        }
+      },
+      {
+        model: User,
+        attributes: ['username'],
+        where:{username: req.params.userName}
+      }
+    ]
+  })
+    .then(dbPostData => {
+      const posts = dbPostData.map(post => post.get({ plain: true }));
+      
+      res.render('search', { posts,loggedIn: req.session.loggedIn });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
