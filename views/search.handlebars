@@ -13,6 +13,12 @@
   </div>
 </form>
 
-{{> topComments search.topComments}}
+<ol class="comment-list">
+  {{#each topCommenters as |topCommenters|}}
+  <li>
+    {{> topComments topComments}}
+  </li>
+  {{/each}}
+</ol>
 
 <script src="/javascript/main.js"></script>

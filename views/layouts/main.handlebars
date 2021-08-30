@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stack Underflow</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="wrapper">
-      <header>
+      <header class="mt-4 font-mono">
         <h1>
-          <a href="/">Stack Underflow</a>
+          <a class="text-indigo-600 text-2xl" href="/">Stack Underflow</a>
         </h1>
         <nav>
-          <a href="/search">Search</a>
           {{#if loggedIn}}
+            <a href="/search">Search</a>
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
           {{else}}
-            <a href="/login">login</a>
+            <a class="text-indigo-600" href="/login">login</a>
           {{/if}}
         </nav>
       </header>
-      <main>
+      <main> 
         {{{body}}}
       </main>
       <footer>
@@ -34,7 +38,7 @@
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
-    
+
   </body>
 
 </html>
