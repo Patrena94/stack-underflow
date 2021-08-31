@@ -133,12 +133,12 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
-.upvote-btn {
+.Like-btn {
   background-color: #197d0f;
   transition: background-color .1s;
 }
 
-.upvote-btn:hover {
+.Like-btn:hover {
   background-color: #1f9c13;
 }
 
