@@ -13,6 +13,6 @@ library_name: 'handlebar',
 language_id: 3
 }
 ];
-const seedLibrary = () => Vote.bulkCreate(librarydata);
+const seedLibrary = () => Library.bulkCreate(librarydata);
 
 module.exports = seedLibrary;

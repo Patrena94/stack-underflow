@@ -3,17 +3,17 @@ const {Language} = require('../models');
 const languagedata=[
     {
         id: 1,
-        Language: 'JavaScript'
+        language_name: 'JavaScript'
     },
         {
         id: 2 ,
-        Language: 'HTML'
+        language_name: 'HTML'
     },
         {
         id: 3,
-        Language: 'css'
+        language_name: 'css'
     }  
 ];
-const seedLanguages = () => Vote.bulkCreate(languagedata);
+const seedLanguages = () => Language.bulkCreate(languagedata);
 
 module.exports = seedLanguages;

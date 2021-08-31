@@ -31,7 +31,7 @@ Library.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comment'
+        modelName: 'library'
       }
 );
     module.exports = Library;
