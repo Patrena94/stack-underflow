@@ -1,28 +1,29 @@
+<section class="bg-white bg-opacity-80 ">
 <form class="search-form">
-  <div class="search">
-    <label for="search-type">Choose a Search Option</label>
+  <div class="search pl-2">
+    <label class=" text-blue-600 text-lg font-bold" for="search-type">Choose a Search Option:</label>
 
-    <select name="search-type" id="search-type">
-      <option value="">Select One</option>
+    <select class="pl-2 rounded-sm" name="search-type" id="search-type">
       <option value="topCreators">List Top Creators</option>
       <option value="topCommenters">List Top Commenters</option>
       <option value="usersPost">Search User Post</option>
     </select>
   </div>
+{{!-- what is this additional code for?  --}}
   <div class="additional">
 
   </div>
-  <div>
-    <button type="submit">Search</button>
+  <div class="pl-2 pb-5">
+    <button class="p-1" type="submit">Search</button>
   </div>
 </form>
 
 
 <div class="topContributers">
   {{#if this.topCommenters}}
-  <h1>Top Commenters</h1>
+  <h1 class="text-xl font-extrabold">Top Commenters</h1>
     {{#each this.topCommenters as |comment|}}
-    <section class="comment">
+    <section class="commen bg-opacity-70 bg-white">
       <div class="meta">
           
         {{comment.username}}  ({{comment.num_comments}})
@@ -33,7 +34,7 @@
     {{/each}}
   {{/if}}
  {{#if this.topCreators}}
-  <h1>Top Creators</h1>
+  <h1 class="text-xl font-extrabold">Top Creators</h1>
     {{#each this.topCreators as |posters|}}
     <section class="comment">
       <div class="meta">
@@ -60,5 +61,4 @@
 </section>
 {{/if}}
 </div>
-
-<script src="/javascript/search.js"></script>
+</section><script src="/javascript/search.js"></script>

@@ -53,9 +53,8 @@ a:hover {
 }
 
 button {
-  background-color: #225ca3;
+  background-color: #4c7bb5;
   border: 0;
-  padding: 1%;
   color: white;
   font-weight: bold;
   transition: background-color 0.1s;
@@ -63,9 +62,9 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+/* button:hover {
   background-color: #3486eb;
-}
+} */
 
 .post-list {
   margin: 0;
@@ -173,10 +172,10 @@ form label {
   color: #7d7d7d;
 }
 
-.edit-link {
+/* .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-}
+} */
 
 .upvote-btn {
   background-color: #197d0f;
