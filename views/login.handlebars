@@ -1,33 +1,32 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
+<div class="login-page bg-white bg-opacity-70 sm:rounded-b-xl">
+   <section class="hero h-3/6">
+        <section class="hero">
+          <div>
+            <span>
+                <h3 class="text-white bg-gradient-to-r from-green-400 to-blue-500 text-2xl pl-10"><a class="text-blue-500" href="./signup">Signup</a>&emsp13;to become a member!</a></h3>  
+            </span>
+          </div>
+          <div class="heading  text-center">
+            <h1 class="text-white">Welcome to Stack_Underflo</h1>
+          </div>
+        </section>
+      </section>
+<section class="flex justify-center">
+  <form class="login-form mt-3 border shadow-lg p-2 rounded-lg bg-white bg-opacity-75">
+    <h7 class ="signup-logo font-black text-xl text-blue-600"><i class="fab"</i>Member Login:</h7>
+    <div class="pt-2">
+      <label class="text-black font-bold" for="username-login">Username:</label>
+      <input type="text" id="username-login" />
+    </div>
+    <div class="pt-2">
+      <label class="text-black font-bold" for="password-login">Password:</label>
+      <input type="password" id="password-login" />
+   </div>
+    <div class="pt-4 w-2/6 pb-2">
+      <button class=" hover:bg-blue-900 p-1" type="submit">Login</button>
+    </div>
 </form>
-
+</section>
+</div>
 <script src="/javascript/login.js"></script>

@@ -90,9 +90,9 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-router.put('/upvote', withAuth, (req, res) => {
+router.put('/Like', withAuth, (req, res) => {
   // custom static method created in models/Post.js
-  Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+  Post.Like({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);

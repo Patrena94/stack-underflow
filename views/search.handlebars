@@ -1,0 +1,60 @@
+<section class="bg-white bg-opacity-80 ">
+<form class="search-form">
+  <div class="search pl-2">
+    <label class=" text-blue-700 text-lg font-extrabold" for="search-type">Choose a Search Option:</label>
+
+    <select class="pl-2 rounded-sm" name="search-type" id="search-type">
+      <option value="topCreators">List Top Creators</option>
+      <option value="topCommenters">List Top Commenters</option>
+      <option value="usersPost">Search User Post</option>
+    </select>
+  </div>
+{{!-- what is this additional code for?  --}}
+  <div class="additional">
+
+  </div>
+  <div class="pl-2 pb-5">
+    <button class="p-1" type="submit">Search</button>
+  </div>
+</form>
+
+
+<div class="topContributers text-black pl-2">
+  {{#if this.topCommenters}}
+  <h1 class="text-xl pb-2 text-blue-700 font-extrabold">Top Commenters:</h1>
+    {{#each this.topCommenters as |comment|}}
+    <section class="comment bg-opacity-70 bg-blue-200 flex w-auto shadow-lg rounded-lg w-3/6">
+      <div class="meta">
+      <p>User: {{comment.username}}</p> 
+      <p>Comments: ({{comment.num_comments}})</p> 
+      </div>
+    </section>
+    {{/each}}
+  {{/if}}
+ {{#if this.topCreators}}
+  <h1 class="text-xl text-blue-700 font-extrabold mb-2">Top Creators</h1>
+    {{#each this.topCreators as |posters|}}
+    <section class="comment bg-opacity-70 bg-blue-200 flex w-auto shadow-lg rounded-lg w-3/6">
+      <div class="meta">
+          <p>User: {{posters.username}}</p>
+          <p> Post Count: ({{posters.num_posts}})</p>
+      </div>
+    </section>
+    {{/each}}
+  {{/if}}
+
+{{#if this.posts}}
+<h1 class="text-blue-700 font-extrabold">Posts By User:</h1>
+<section>
+ 
+  <ol>
+    {{#each posts as |post|}}
+    <li class="flex bg-white bg-opacity-30 rounded-b-md">
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+</div>
+</section><script src="/javascript/search.js"></script>
