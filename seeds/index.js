@@ -2,6 +2,8 @@ const seedUsers = require('./user-seeds');
 const seedPosts = require('./post-seeds');
 const seedComments = require('./comment-seeds');
 const seedVotes = require('./vote-seeds');
+const seedLanguage =require('./language-seeds');
+const seedLibrary = require('./library-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -19,6 +21,12 @@ const seedAll = async () => {
 
   await seedVotes();
   console.log('--------------');
+
+  await seedLanguage();
+  console.log('--------------'); 
+  
+  await seedLibrary();
+  console.log('--------------'); 
 
   process.exit(0);
 };
