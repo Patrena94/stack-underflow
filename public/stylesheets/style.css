@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  
+
 }
 
 body,
@@ -10,19 +12,22 @@ html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-image: url("./img/pexels-mengliu-di-3064079.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.login-page, .signup-page {
-  background-image: url("./img/header.png");
+/* .login-page, .signup-page {
+  background-image: url("./img/pexels-tima-miroshnichenko-5380649.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-.signup-page{
+} */
+/* .signup-page{
   background-image: url("./img/pexels-hitesh-choudhary-879109.jpg");
-}
+} */
 
 .heading {
   color: #fff;
@@ -36,6 +41,12 @@ a {
   font-weight: bold;
   transition: color 0.1s;
 }
+header a {
+  color: white;
+  font-size:larger;
+  font-family: monospace;
+}
+
 
 a:hover {
   color: #3486eb;
@@ -95,6 +106,12 @@ form label {
   display: flex;
   flex-direction: column;
 }
+/* .dash{
+  background-image: url("./img/pexels-olenka-sergienko-1772123.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 
 /* header {
   border-bottom: 1px solid #ccc;
@@ -108,10 +125,10 @@ form label {
   font-size: 1em;
 } */
 
-main {
+/* main {
   flex: 1;
-  /* padding: 2% 4%; */
-}
+  padding: 2% 4%;
+} */
 
 .btn-no-style {
   background: none;
@@ -143,12 +160,12 @@ main {
   /* margin-bottom: 2%; */
   /* line-height: 150%; */
 }
-.homepage{
-  background-image: url("./img/pexels-tima-miroshnichenko-5380649.jpg");
+/* .homepage{
+  background-image: url("./img/pexels-zhaocan-li-1755243.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .post .title span {
   font-style: italic;

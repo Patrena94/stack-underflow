@@ -13,17 +13,17 @@
 
   <body>
     <div class="wrapper">
-      <header class="py-5 flex justify-between align-center border-b-4">
-        <h1 class=" pl-2 text-2xl">
+      <header class="py-4 flex justify-between align-center border-b-4">
+        <h1 class=" pl-2 text-2xl font-extrabold">
           <a href="/">Stack_Underflo</a>
         </h1>
-        <nav>
+        <nav class="flex justify-between">
           {{#if loggedIn}}
-            <a href="/search">Search</a>
-            <a href="/dashboard">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
+            <a class="mr-2 text-xl bg-blue-600 p-1 rounded-lg" href="/search">Search</a>
+            <a class="mr-2 text-xl bg-blue-600 p-1 rounded-lg" href="/dashboard">Dashboard</a>
+            <button class="mr-2text-xl bg-blue-600 p-1 rounded-lg" id="logout" class="btn-no-style">Logout</button>
           {{else}}
-            <a class="text-xl pr-2" href="/login">Login</a>
+            <a class="text-xl bg-blue-600 p-1 rounded-lg" href="/login">Login</a>
           {{/if}}
         </nav>
       </header>
