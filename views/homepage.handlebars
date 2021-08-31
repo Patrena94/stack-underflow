@@ -1,7 +1,9 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{> post-info post }}
-  </li>
-  {{/each}}
-</ol>
+<section class=" flex justify-center homepage">
+    <ol class="post-list">
+      {{#each posts as |post|}}
+      <li class="w-auto px-4 pt-4 flex">
+        {{> post-info post }}
+      </li>
+      {{/each}}
+    </ol>
+</section>

@@ -13,17 +13,17 @@
 
   <body>
     <div class="wrapper">
-      <header class="py-5">
-        <h1>
-          <a href="/">Stack Underflow</a>
+      <header class="py-5 flex justify-between align-center border-b-4">
+        <h1 class=" pl-2 text-2xl">
+          <a href="/">Stack_Underflo</a>
         </h1>
         <nav>
-          <a href="/search">Search</a>
           {{#if loggedIn}}
+            <a href="/search">Search</a>
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
           {{else}}
-            <a href="/login">login</a>
+            <a class="text-xl pr-2" href="/login">Login</a>
           {{/if}}
         </nav>
       </header>
