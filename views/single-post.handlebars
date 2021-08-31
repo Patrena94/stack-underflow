@@ -7,12 +7,12 @@
   </div>
   <div>
     <button class="p-1 hover:bg-blue-900" type="submit">Add Comment</button>
-    <button class=" hover:bg-green-800 p-1 bg-green-400" type="button" class="upvote-btn">Like</button>
+    <button class=" hover:bg-green-800 p-1 bg-green-400 Like-btn" >Like</button>
   </div>
 </form>
 {{/if}}
 {{> comments post.comments}}
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+<script src="/javascript/Like.js"></script>
 {{/if}}
