@@ -1,0 +1,64 @@
+<form class="search-form">
+  <div class="search">
+    <label for="search-type">Choose a Search Option</label>
+
+    <select name="search-type" id="search-type">
+      <option value="">Select One</option>
+      <option value="topCreators">List Top Creators</option>
+      <option value="topCommenters">List Top Commenters</option>
+      <option value="usersPost">Search User Post</option>
+    </select>
+  </div>
+  <div class="additional">
+
+  </div>
+  <div>
+    <button type="submit">Search</button>
+  </div>
+</form>
+
+
+<div class="topContributers">
+  {{#if this.topCommenters}}
+  <h1>Top Commenters</h1>
+    {{#each this.topCommenters as |comment|}}
+    <section class="comment">
+      <div class="meta">
+          
+        {{comment.username}}  ({{comment.num_comments}})
+    
+      </div>
+
+    </section>
+    {{/each}}
+  {{/if}}
+ {{#if this.topCreators}}
+  <h1>Top Creators</h1>
+    {{#each this.topCreators as |posters|}}
+    <section class="comment">
+      <div class="meta">
+          
+        {{posters.username}}  ({{posters.num_posts}})
+    
+      </div>
+
+    </section>
+    {{/each}}
+  {{/if}}
+
+{{#if this.posts}}
+<h1>Posts By User</h1>
+<section>
+ 
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+</div>
+
+<script src="/javascript/search.js"></script>
