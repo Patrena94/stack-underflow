@@ -1,53 +1,86 @@
 * {
   box-sizing: border-box;
+  
+
 }
 
-body, html {
+body,
+html {
+  width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-image: url("./img/pexels-mengliu-di-3064079.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
+.signup-page {
+  background-image: url("./img/pexels-tima-miroshnichenko-5380649.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 90%;
+}
+/* .signup-page{
+  background-image: url("./img/pexels-hitesh-choudhary-879109.jpg");
+} */
+
+.heading {
+  color: #fff;
+  font-size: 30px;
+  line-height: 60px;
+  font-family:cursive;
+}
 a {
   text-decoration: none;
   color: #225ca3;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
 }
+header a {
+  color: white;
+  font-size:larger;
+  font-family: monospace;
+}
+
 
 a:hover {
   color: #3486eb;
 }
 
 button {
-  background-color: #225ca3;
+  background-color: #4c7bb5;
   border: 0;
-  padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
 
-button:hover {
+/* button:hover {
   background-color: #3486eb;
-}
+} */
 
 .post-list {
   margin: 0;
   padding: 0;
 }
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -65,31 +98,37 @@ form label {
   display: block;
 }
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   min-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+} */
+/* .dash{
+  background-image: url("./img/pexels-olenka-sergienko-1772123.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 
-header {
+/* header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
-}
+} */
 
-header h1 {
+/* header h1 {
   font-size: 1em;
-}
+} */
 
-main {
+/* main {
   flex: 1;
   padding: 2% 4%;
-}
+} */
 
 .btn-no-style {
   background: none;
@@ -100,7 +139,7 @@ main {
   color: #225ca3;
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-left: 16px;
 }
 
@@ -118,9 +157,15 @@ main {
 }
 
 .post {
-  margin-bottom: 2%;
-  line-height: 150%;
+  /* margin-bottom: 2%; */
+  /* line-height: 150%; */
 }
+/* .homepage{
+  background-image: url("./img/pexels-zhaocan-li-1755243.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 
 .post .title span {
   font-style: italic;
@@ -128,14 +173,14 @@ main {
   color: #7d7d7d;
 }
 
-.edit-link {
+/* .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-}
+} */
 
 .Like-btn {
   background-color: #197d0f;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 }
 
 .Like-btn:hover {
@@ -157,8 +202,8 @@ main {
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 .new-post-form input {
@@ -169,10 +214,10 @@ main {
   margin-bottom: 5%;
 }
 
-footer {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+.hero {
+  background-image: url("./img/pexels-hitesh-choudhary-879109.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

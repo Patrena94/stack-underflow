@@ -1,58 +1,55 @@
+<section class="bg-white bg-opacity-80 ">
 <form class="search-form">
-  <div class="search">
-    <label for="search-type">Choose a Search Option</label>
+  <div class="search pl-2">
+    <label class=" text-blue-700 text-lg font-extrabold" for="search-type">Choose a Search Option:</label>
 
-    <select name="search-type" id="search-type">
-      <option value="">Select One</option>
+    <select class="pl-2 rounded-sm" name="search-type" id="search-type">
       <option value="topCreators">List Top Creators</option>
       <option value="topCommenters">List Top Commenters</option>
       <option value="usersPost">Search User Post</option>
     </select>
   </div>
+{{!-- what is this additional code for?  --}}
   <div class="additional">
 
   </div>
-  <div>
-    <button type="submit">Search</button>
+  <div class="pl-2 pb-5">
+    <button class="p-1" type="submit">Search</button>
   </div>
 </form>
 
 
-<div class="topContributers">
+<div class="topContributers text-black pl-2">
   {{#if this.topCommenters}}
-  <h1>Top Commenters</h1>
+  <h1 class="text-xl pb-2 text-blue-700 font-extrabold">Top Commenters:</h1>
     {{#each this.topCommenters as |comment|}}
-    <section class="comment">
+    <section class="comment bg-opacity-70 bg-blue-200 flex w-auto shadow-lg rounded-lg w-3/6">
       <div class="meta">
-          
-        {{comment.username}}  ({{comment.num_comments}})
-    
+      <p>User: {{comment.username}}</p> 
+      <p>Comments: ({{comment.num_comments}})</p> 
       </div>
-
     </section>
     {{/each}}
   {{/if}}
  {{#if this.topCreators}}
-  <h1>Top Creators</h1>
+  <h1 class="text-xl text-blue-700 font-extrabold mb-2">Top Creators</h1>
     {{#each this.topCreators as |posters|}}
-    <section class="comment">
+    <section class="comment bg-opacity-70 bg-blue-200 flex w-auto shadow-lg rounded-lg w-3/6">
       <div class="meta">
-          
-        {{posters.username}}  ({{posters.num_posts}})
-    
+          <p>User: {{posters.username}}</p>
+          <p> Post Count: ({{posters.num_posts}})</p>
       </div>
-
     </section>
     {{/each}}
   {{/if}}
 
 {{#if this.posts}}
-<h1>Posts By User</h1>
+<h1 class="text-blue-700 font-extrabold">Posts By User:</h1>
 <section>
  
   <ol>
     {{#each posts as |post|}}
-    <li>
+    <li class="flex bg-white bg-opacity-30 rounded-b-md">
       {{> post-info post}}
     </li>
     {{/each}}
@@ -60,5 +57,4 @@
 </section>
 {{/if}}
 </div>
-
-<script src="/javascript/search.js"></script>
+</section><script src="/javascript/search.js"></script>
