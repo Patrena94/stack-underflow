@@ -13,24 +13,43 @@
 
   <body>
     <div class="wrapper">
-      <header class="py-4 bg-gray-600 flex justify-between bg-opacity-80 sticky top-0 align-center border-b-4">
-        <h1 class=" pl-2 text-2xl font-extrabold">
+      <header
+        class="py-4 pr-2 bg-gray-600 flex justify-between bg-opacity-80 sticky top-0 align-center border-b-4"
+      >
+        <h1 class="pl-2 text-2xl font-extrabold">
           <a href="/">Stack_Underflo</a>
         </h1>
         <nav class="flex justify-between">
           {{#if loggedIn}}
-            <a class="mr-2 text-xl bg-blue-600 p-1 rounded-lg" href="/search">Search</a>
-            <a class="mr-2 text-xl bg-blue-600 p-1 rounded-lg" href="/dashboard">Dashboard</a>
-            <button class="mr-2 text-xl bg-blue-600 p-1 rounded-lg" id="logout" class="btn-no-style">Logout</button>
+            <a
+              class="mr-2 text-xl bg-blue-600 p-1 rounded-lg"
+              href="/search"
+            >Search</a>
+            <a
+              class="mr-2 text-xl bg-blue-600 p-1 rounded-lg"
+              href="/dashboard"
+            >Dashboard</a>
+            <button
+              class="mr-2 text-xl bg-blue-600 p-1 rounded-lg"
+              id="logout"
+              class="btn-no-style"
+            >Logout</button>
           {{else}}
-            <a class="text-xl bg-blue-600 p-1 rounded-lg" href="/login">Login</a>
+            <a
+              class="text-xl bg-blue-600 p-1 rounded-lg"
+              href="/login"
+            >Login</a>
+            <a
+              class="text-xl bg-blue-600  ml-2 p-1 rounded-lg"
+              href="./signup"
+            >SignUp</a>
           {{/if}}
         </nav>
       </header>
       <main>
         {{{body}}}
       </main>
-      <footer>
+      <footer class="flex justify-center p-1 font-extrabold text-xl text-white">
         Thanks for visiting!
       </footer>
     </div>

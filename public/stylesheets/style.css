@@ -19,12 +19,13 @@ html {
   background-attachment: fixed;
 }
 
-/* .login-page, .signup-page {
+.signup-page {
   background-image: url("./img/pexels-tima-miroshnichenko-5380649.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-} */
+  opacity: 90%;
+}
 /* .signup-page{
   background-image: url("./img/pexels-hitesh-choudhary-879109.jpg");
 } */
@@ -97,14 +98,14 @@ form label {
   display: block;
 }
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   min-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+} */
 /* .dash{
   background-image: url("./img/pexels-olenka-sergienko-1772123.jpg");
   background-position: center;
@@ -213,10 +214,10 @@ form label {
   margin-bottom: 5%;
 }
 
-footer {
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+.hero {
+  background-image: url("./img/pexels-hitesh-choudhary-879109.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
