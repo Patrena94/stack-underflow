@@ -3,7 +3,14 @@ const { Language } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res)=> {
-    Language.findall()
+    Language.findall({
+        attributes: [
+            'id',
+            'library_name',
+            'language_id',
+            'created_at',
+        ],
+    })
     .then(dbLanguageData => res.json(dbLanguageData))
     .catch(err =>{
         console.log(err);

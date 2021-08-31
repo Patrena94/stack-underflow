@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     
     Library.create({
       Library_name: req.body.Library_name,
-      language_id: req.session.language_id,
+      language_id: req.body.language_id,
     })
       .then(dbLibraryData => res.json(dbLibraryData))
       .catch(err => {

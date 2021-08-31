@@ -12,7 +12,11 @@ const languagedata=[
         {
         id: 3,
         language_name: 'css'
-    }  
+    },  
+{
+id: 4,
+language_name:'php'
+}
 ];
 const seedLanguages = () => Language.bulkCreate(languagedata);
 

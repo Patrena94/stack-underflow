@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
+const { Post, User, Comment, Language, Library, Vote } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
@@ -22,6 +22,22 @@ router.get('/', (req, res) => {
           attributes: ['username']
         }
       },
+      {
+        model: Language,
+        attributes: ['id', 'language_name', 'created_at'],
+        include:{
+          model: Post,
+          attributes: ['title']
+        }
+      },
+      { 
+        model: Library,
+      attributes:['id', 'library_name', created_at],
+     include:{      
+       model: Post, 
+      attributes:['title']
+      }
+    },
       {
         model: User,
         attributes: ['username']
@@ -50,6 +66,8 @@ router.get('/post/:id', (req, res) => {
     attributes: [
       'id',
       'post_url',
+      'language_name',
+      'library_name',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -63,6 +81,22 @@ router.get('/post/:id', (req, res) => {
           attributes: ['username']
         }
       },
+      {
+        model: Language,
+        attributes: ['id', 'language_name', 'created_at'],
+        include:{
+          model: Post,
+          attributes: ['title']
+        }
+      },
+      { 
+      model: Library,
+      attributes:['id', 'library_name', created_at],
+      include:{      
+       model: Post, 
+      attributes:['title']
+      }
+    },
       {
         model: User,
         attributes: ['username']

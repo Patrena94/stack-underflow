@@ -16,6 +16,7 @@
     "jest": "^27.1.0",
     "mysql2": "^2.3.0",
     "package-json": "^7.0.0",
+    "passport": "^0.4.1",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {},
