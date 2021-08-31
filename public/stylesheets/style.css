@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -10,11 +11,26 @@ body, html {
   color: #333;
 }
 
+.login-page {
+  background-image: url("./img/header.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+
+.heading {
+  color: #fff;
+  font-size: 30px;
+  line-height: 60px;
+  font-family:cursive;
+}
 a {
   text-decoration: none;
   color: #225ca3;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
 }
 
 a:hover {
@@ -27,7 +43,7 @@ button {
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -41,13 +57,15 @@ button:hover {
   padding: 0;
 }
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -100,7 +118,7 @@ main {
   color: #225ca3;
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-left: 16px;
 }
 
@@ -135,7 +153,7 @@ main {
 
 .upvote-btn {
   background-color: #197d0f;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 }
 
 .upvote-btn:hover {
@@ -157,8 +175,8 @@ main {
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 .new-post-form input {
