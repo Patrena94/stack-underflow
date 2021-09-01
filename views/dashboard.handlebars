@@ -20,7 +20,7 @@
   <h2 class="pl-2 text-xl text-blue-700 font-extrabold">Your Posts:</h2>
   <ol>
     {{#each posts as |post|}}
-    <li class="list-item flex bg-white bg-opacity-30 p-1 w-auto rounded-b-md">
+    <li class="list-item flex bg-white bg-opacity-30 p-1 ">
       {{> post-info post}}
       <a class=" mt-4 rounded-md p-1 hover:bg-blue-800 bg-blue-200" href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
