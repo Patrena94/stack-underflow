@@ -22,25 +22,25 @@
         <nav class="sm:flex sm:justify-between sm:pt-0 pt-2">
           {{#if loggedIn}}
             <a
-              class="mr-2 text-xs sm:text-xl bg-blue-600 p-1 rounded-lg"
+              class="mr-2 text-xs sm:text-xl hover:bg-blue-900 bg-blue-400 p-1 rounded-lg"
               href="/search"
             >Search</a>
             <a
-              class="mr-2 text-xs sm:text-xl bg-blue-600 p-1 rounded-lg"
+              class="mr-2 text-xs sm:text-xl bg-blue-400 hover:bg-blue-900  p-1 rounded-lg"
               href="/dashboard"
             >Dashboard</a>
             <button
-              class="mr-2 text-xs sm:text-xl bg-blue-600 p-1 rounded-lg"
+              class="mr-2 text-xs sm:text-xl bg-blue-400 hover:bg-blue-900  p-1 rounded-lg"
               id="logout"
               class="btn-no-style"
             >Logout</button>
           {{else}}
             <a
-              class="sm:text-xl text-xs bg-blue-600 p-1 rounded-lg"
+              class="sm:text-xl text-xs bg-blue-400 hover:bg-blue-900  p-1 rounded-lg"
               href="/login"
             >Login</a>
             <a
-              class="sm:text-xl text-xs bg-blue-600  ml-2 p-1 rounded-lg"
+              class="sm:text-xl text-xs bg-blue-400 hover:bg-blue-900   ml-2 p-1 rounded-lg"
               href="./signup"
             >SignUp</a>
           {{/if}}
