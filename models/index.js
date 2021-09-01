@@ -70,10 +70,12 @@ Post.hasMany(Comment, {
 });
 
 Language.hasMany(Post, {
-  foreignKey: 'language_id',
+  as: 'language_name',
+  // foreignKey: 'language_id',
   // onDelete: 'SET NULL'
 });
 Library.hasMany(Post, {
+  as: 'library_name',
   foreignKey: 'library_id', 
   onDelete: 'SET Null'
 })
