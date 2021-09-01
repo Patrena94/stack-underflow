@@ -27,7 +27,7 @@ router.get('/topCommenters', (req, res) => {
           attributes:[],
           include: []
       }],
-       order: [[sequelize.literal('num_comments'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
+       order: [[sequelize.literal('num_comments'), 'DESC'], [sequelize.literal('user.id'), 'ASC']],
     }
     )
       .then(dbCommentData => {
@@ -53,7 +53,7 @@ router.get('/topCommenters', (req, res) => {
           attributes:[],
           include: []
       }],
-       order: [[sequelize.literal('num_posts','User.id'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
+       order: [[sequelize.literal('num_posts','user.id'), 'DESC'], [sequelize.literal('user.id'), 'ASC']],
     }
     )
       .then(dbPostData => {
