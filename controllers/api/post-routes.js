@@ -71,7 +71,7 @@ router.get('/:id', (req, res) => {
       },
       { 
         model: Library,
-      attributes:['id', 'library_name', created_at],
+      attributes:['id', 'library_name', 'created_at'],
      include:{      
        model: Post, 
       attributes:['title']
@@ -114,7 +114,7 @@ router.post('/', withAuth, (req, res) => {
 
 router.put('/Like', withAuth, (req, res) => {
   // custom static method created in models/Post.js
-  Post.Like({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+  Post.Like({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User, Language, Library })
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);
