@@ -5,12 +5,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 
 
-router.get('/', (req,res)=>{
-    console.log('======================');
-    res.render('search', {loggedIn: req.session.loggedIn })
-    
-    
-})
+
 
 // get all users
 router.get('/topCommenters', (req, res) => {
@@ -104,4 +99,11 @@ router.get('/topCommenters', (req, res) => {
     });
 });
 
+
+router.get('*', (req,res)=>{
+  console.log('======================');
+  res.render('search', {loggedIn: req.session.loggedIn })
+  
+  
+})
 module.exports = router;
