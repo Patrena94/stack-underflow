@@ -1,4 +1,4 @@
-<section class="bg-white bg-opacity-80 ">
+<section class="bg-white bg-opacity-80 h-auto">
 <form class="search-form">
   <div class="search pl-2">
     <label class=" text-blue-700 text-lg font-extrabold" for="search-type">Choose a Search Option:</label>
@@ -14,7 +14,7 @@
 
   </div>
   <div class="pl-2 pb-5">
-    <button class="p-1" type="submit">Search</button>
+    <button class=" bg-blue-400 hover:bg-blue-800 p-1" type="submit">Search</button>
   </div>
 </form>
 
@@ -32,7 +32,7 @@
     {{/each}}
   {{/if}}
  {{#if this.topCreators}}
-  <h1 class="text-xl text-blue-700 font-extrabold mb-2">Top Creators</h1>
+  <h1 class="text-xl text-blue-700 font-extrabold  mb-2">Top Creators</h1>
     {{#each this.topCreators as |posters|}}
     <section class="comment bg-opacity-70 bg-blue-200 flex w-auto shadow-lg rounded-lg w-3/6">
       <div class="meta">
@@ -57,4 +57,5 @@
 </section>
 {{/if}}
 </div>
-</section><script src="/javascript/search.js"></script>
+</section>
+<script src="/javascript/search.js"></script>

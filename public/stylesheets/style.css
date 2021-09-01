@@ -63,9 +63,6 @@ button {
   border-radius: 5px;
 }
 
-/* button:hover {
-  background-color: #3486eb;
-} */
 
 .post-list {
   margin: 0;
@@ -98,37 +95,6 @@ form label {
   display: block;
 }
 
-/* .wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-} */
-/* .dash{
-  background-image: url("./img/pexels-olenka-sergienko-1772123.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* header {
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1%;
-} */
-
-/* header h1 {
-  font-size: 1em;
-} */
-
-/* main {
-  flex: 1;
-  padding: 2% 4%;
-} */
 
 .btn-no-style {
   background: none;
@@ -156,16 +122,6 @@ form label {
   background-color: #ff643d;
 }
 
-.post {
-  /* margin-bottom: 2%; */
-  /* line-height: 150%; */
-}
-/* .homepage{
-  background-image: url("./img/pexels-zhaocan-li-1755243.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 .post .title span {
   font-style: italic;
@@ -173,10 +129,6 @@ form label {
   color: #7d7d7d;
 }
 
-/* .edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
-} */
 
 .Like-btn {
   background-color: #197d0f;
@@ -220,4 +172,5 @@ form label {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  opacity: 90%;
 }
