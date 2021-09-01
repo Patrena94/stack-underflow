@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Language, Library,Vote } = require('../../models');
+const { Post, User, Comment, Language, Library, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all users
@@ -114,7 +114,7 @@ router.post('/', withAuth, (req, res) => {
 
 router.put('/Like', withAuth, (req, res) => {
   // custom static method created in models/Post.js
-  Post.Like({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User, Language, Library })
+  Post.Like({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);

@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
       },
       { 
         model: Library,
-      attributes:['id', 'library_name', created_at],
+      attributes:['id', 'library_name', 'created_at'],
      include:{      
        model: Post, 
       attributes:['title']
