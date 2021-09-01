@@ -7,7 +7,7 @@ const { Post, User, Comment, Vote } = require('../models');
 
 router.get('/', (req,res)=>{
     console.log('======================');
-    res.render('search')
+    res.render('search', {loggedIn: req.session.loggedIn })
     
     
 })
@@ -32,7 +32,7 @@ router.get('/topCommenters', (req, res) => {
     )
       .then(dbCommentData => {
         const topCommenters = dbCommentData.map(comment => comment.get({ plain: true }))
-        res.render('search', {topCommenters})})
+        res.render('search', {topCommenters ,loggedIn: req.session.loggedIn })})
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -58,7 +58,7 @@ router.get('/topCommenters', (req, res) => {
     )
       .then(dbPostData => {
         const topCreators = dbPostData.map(post => post.get({ plain: true }))
-        res.render('search', {topCreators})
+        res.render('search', {topCreators,loggedIn: req.session.loggedIn })
       })
       .catch(err => {
         console.log(err);
