@@ -9,6 +9,12 @@
       <span>({{format_url post.post_url}})</span>
     </div>
     <div>
+      <select name="language-name" type="text" value="{{post.language_name}}"/>
+    </div>
+    <div>
+      <select name="library-name" type="text" value="{{post.library_name}}"/>
+    </div>
+    <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>

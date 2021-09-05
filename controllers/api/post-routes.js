@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'post_url',
-      'title',
-      'library_name',
       'language_name',
+      'libray_name',
+      'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
@@ -61,22 +61,6 @@ router.get('/:id', (req, res) => {
           attributes: ['username']
         }
       },
-      {
-        model: Language,
-        attributes: ['id', 'language_name', 'created_at'],
-        include:{
-          model: Post,
-          attributes: ['title']
-        }
-      },
-      { 
-        model: Library,
-      attributes:['id', 'library_name', 'created_at'],
-     include:{      
-       model: Post, 
-      attributes:['title']
-      }
-    },
       {
         model: User,
         attributes: ['username']

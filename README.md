@@ -7,6 +7,7 @@
 
  # Description
 
+The Stack-Underflow app is a diversified resource center where fledgling coders go to expand their knowledge to the next level. It provides coders with resources to ignite their light about a subject matter.  The application provides references to websites, books, coding puzzles, and answer to questions submitted.
 
 
  # Table of Content 
@@ -30,15 +31,16 @@
 
  # Questions  
 
- 
+User with questions about this project should contact the developers utilizing their Github: (https://github.com/Patrena94),(https://github.com/nylesor28), (https://github.com/javantie4),(https://github.com/cgcam95). 
  
 
  
 # Installation
- The user will need to visit https://stack-underflo.herokuapp.com/ in their internet browser to review current and contribute to post.    
+ The user will need to visit https://stack-underflo.herokuapp.com/ in their internet browser to review and contribute to current post.    
 
 # Usage
-
+The user will need to visit https://stack-underflo.herokuapp.com to review current post and to view the Top Creators, Commentors, and Search User Post.  The user will need to create an account in order to post or comment on a post.  The user can create an account by selecting Signup on the navigational bar or clicking on signup on the login page. 
+The user will be directed to enter a Username, Password, and email address.  The user will be directed to their personal dashboard where they may post a new comment.  The comment is saved to the website under the user’s dashboard as well as the homepage.  The member has the ability to delete or edit their own post.  In addition to commenting or voting on existing post. 
 
 Users and Contributors may review a walk-through video of the above description by clicking the Screencastify link below:
 

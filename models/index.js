@@ -3,8 +3,6 @@ const Post = require('./Post');
 const User = require('./User');
 const Vote = require('./Vote');
 const Comment = require('./Comment');
-const Language = require('./Language');
-const Library = require('./Library');
 
 
 // create associations
@@ -69,15 +67,5 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id',
 });
 
-Language.hasMany(Post, {
-  as: 'language_name',
-  // foreignKey: 'language_id',
-  // onDelete: 'SET NULL'
-});
-Library.hasMany(Post, {
-  as: 'library_name',
-  foreignKey: 'library_id', 
-  onDelete: 'SET Null'
-})
 
-module.exports = { User, Post, Vote, Comment,Language,Library };
+module.exports = { User, Post, Vote, Comment};

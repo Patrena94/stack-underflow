@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-const Library = require("./Library");
+
 // create our Post model
 class Post extends Model {
   static Like(body, models) {
@@ -67,18 +67,18 @@ Post.init(
         isURL: true,
       },
     },
+    language_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    library_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
-        key: "id",
-      },
-    },
-
-    language_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "language",
         key: "id",
       },
     },
