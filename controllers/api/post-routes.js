@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Vote } = require('../../models');
+const { Post, User, Comment, Language, Library, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all users
@@ -10,6 +10,8 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'post_url',
+      'language_name',
+      'libray_name',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -44,6 +46,8 @@ router.get('/:id', (req, res) => {
     attributes: [
       'id',
       'post_url',
+      'language_name',
+      'library_name',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -81,6 +85,8 @@ router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,
+    language_name: req.body.language_name,
+    library_name: req.body.library_name,
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))

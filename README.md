@@ -7,6 +7,7 @@
 
  # Description
 
+The Stack-Underflow app is a diversified resource center where fledgling coders go to expand their knowledge to the next level. It provides coders with resources to ignite their light about a subject matter.  The application provides references to websites, books, coding puzzles, and answer to questions submitted.
 
 
  # Table of Content 
@@ -30,15 +31,16 @@
 
  # Questions  
 
- 
+User with questions about this project should contact the developers utilizing their Github: (https://github.com/Patrena94),(https://github.com/nylesor28), (https://github.com/javantie4),(https://github.com/cgcam95). 
  
 
  
 # Installation
- The user will need to visit https://stack-underflo.herokuapp.com/ in their internet browser to review current and contribute to post.    
+ The user will need to visit https://stack-underflo.herokuapp.com/ in their internet browser to review and contribute to current post.    
 
 # Usage
-
+The user will need to visit https://stack-underflo.herokuapp.com to review current post and to view the Top Creators, Commentors, and Search User Post.  The user will need to create an account in order to post or comment on a post.  The user can create an account by selecting Signup on the navigational bar or clicking on signup on the login page. 
+The user will be directed to enter a Username, Password, and email address.  The user will be directed to their personal dashboard where they may post a new comment.  The comment is saved to the website under the user’s dashboard as well as the homepage.  The member has the ability to delete or edit their own post.  In addition to commenting or voting on existing post. 
 
 Users and Contributors may review a walk-through video of the above description by clicking the Screencastify link below:
 
@@ -46,7 +48,7 @@ Users and Contributors may review a walk-through video of the above description 
 
 Heroku walk through video:
 
-
+https://drive.google.com/file/d/11KtUry0xcvOsMTieQQiEJI0lpVUaxkBu/view
 
 # Heroku
 The application has been deployed utilizing Heroku. Please review the application utilzing the below link.
@@ -60,7 +62,30 @@ The contributor will need seek permission from the developers. Upon approval the
 In order to test the application, the Contributor will need to initiate the application by typing into the command line mysql -u root -p.  The contributor will be prompted to enter their password. The contributor should ensure that the following applications are installed express-handlebars (npm i express-handlebars); MySQL2 and Sequelize (npm i sequelize mysql2); dotenv (npm i dotenv); bcrypt (npm i bcrypt); express-session (npm i express-session); connect-session-sequelize (npm i connect-session-sequelize). In addition to, standard express (npm I express); inquirer (npm i inquirer); and (npm init -y).  The contributor will need to add jawdb to the Heroku file to deploy the application. 
 
 # Screenshots
-
+![image](https://user-images.githubusercontent.com/83892241/131596909-30c2dc88-938d-4bdb-a7ad-2e26499a7ca9.png)
+![image](https://user-images.githubusercontent.com/83892241/131597391-5c0cb7a9-e28a-4c54-8871-ac008b42e821.png)
+![image](https://user-images.githubusercontent.com/83892241/131597446-1ca5eff0-0298-4077-985f-164f2465b04f.png)
+![image](https://user-images.githubusercontent.com/83892241/131597572-ae800bb2-b9e3-455e-8453-5b95f0055f08.png)
+![image](https://user-images.githubusercontent.com/83892241/131597603-b4c8c086-ee6e-42dd-a4e2-42216e216c56.png)
+![image](https://user-images.githubusercontent.com/83892241/131597691-9910e9d7-2be8-4f7c-8167-aa35d9e2e95a.png)
+![image](https://user-images.githubusercontent.com/83892241/131597758-82622781-fee8-4a21-b1b9-1bfbe1beadf9.png)
+![image](https://user-images.githubusercontent.com/83892241/131597879-2f7f31b0-63cd-4e0a-a5bf-1238161a0fba.png)
+![image](https://user-images.githubusercontent.com/83892241/131597924-ec564fba-4cac-4884-ae20-0eccad753969.png)
+![image](https://user-images.githubusercontent.com/83892241/131597973-9f40ee37-3d81-46c2-97ea-5c8d6374aa7e.png)
+![image](https://user-images.githubusercontent.com/83892241/131598014-84d1e9a6-43d7-4e2b-ba01-b3b6021f5cce.png)
+![image](https://user-images.githubusercontent.com/83892241/131598047-a1a93795-92c8-4e39-b586-56daeaf0ef15.png)
+![image](https://user-images.githubusercontent.com/83892241/131598080-7f40d34f-5685-4586-bb58-506a019b0d2b.png)
+![image](https://user-images.githubusercontent.com/83892241/131598144-f96a5f03-f911-484b-b6f7-caf97b7036bf.png)
+![image](https://user-images.githubusercontent.com/83892241/131598167-e237de7a-ef99-4361-bbee-cbc05aac4a01.png)
+![image](https://user-images.githubusercontent.com/83892241/131598224-10b27ba1-b34b-4a9a-a0a8-f3c0e2fb0381.png)
+![image](https://user-images.githubusercontent.com/83892241/131598274-45099f5b-f1df-4983-b5d9-59a9109f4902.png)
+![image](https://user-images.githubusercontent.com/83892241/131598304-0f95085d-1c8f-4f12-ab7b-e7c835c83911.png)
+![image](https://user-images.githubusercontent.com/83892241/131598424-e803c188-7e72-4251-a3eb-af8cb7ed4eb4.png)
+![image](https://user-images.githubusercontent.com/83892241/131598449-6c25ba73-4bf5-4568-812c-872ab4d74c8f.png)
+![image](https://user-images.githubusercontent.com/83892241/131598504-fb3ae49b-c288-49b6-bb10-fdcc7efe1c4a.png)
+![image](https://user-images.githubusercontent.com/83892241/131598539-0eb2eeec-616a-4cc4-a1c2-abec4171c1ba.png)
+![image](https://user-images.githubusercontent.com/83892241/131598570-d13093c9-c880-44df-b553-f2df69963f12.png)
+![image](https://user-images.githubusercontent.com/83892241/131598600-88012348-d603-4532-a6a8-7566b92dcc72.png)
 
 ❤️ Developed by Akeem Clark, Camil Grabowski, Roselyn Dorsainvill, and Patrena Smith, LLC. 2021
 
