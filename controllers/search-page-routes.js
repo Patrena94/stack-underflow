@@ -5,12 +5,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote, Language } = require('../models');
 
 
-router.get('/', (req,res)=>{
-    console.log('======================');
-    res.render('search')
-    
-    
-})
+
 
 // get all users
 router.get('/topCommenters', (req, res) => {
@@ -27,12 +22,12 @@ router.get('/topCommenters', (req, res) => {
           attributes:[],
           include: []
       }],
-       order: [[sequelize.literal('num_comments'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
+       order: [[sequelize.literal('num_comments'), 'DESC'], [sequelize.literal('user.id'), 'ASC']],
     }
     )
       .then(dbCommentData => {
         const topCommenters = dbCommentData.map(comment => comment.get({ plain: true }))
-        res.render('search', {topCommenters})})
+        res.render('search', {topCommenters ,loggedIn: req.session.loggedIn })})
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -53,12 +48,12 @@ router.get('/topCommenters', (req, res) => {
           attributes:[],
           include: []
       }],
-       order: [[sequelize.literal('num_posts','User.id'), 'DESC'], [sequelize.literal('User.id'), 'ASC']],
+       order: [[sequelize.literal('num_posts','user.id'), 'DESC'], [sequelize.literal('user.id'), 'ASC']],
     }
     )
       .then(dbPostData => {
         const topCreators = dbPostData.map(post => post.get({ plain: true }))
-        res.render('search', {topCreators})
+        res.render('search', {topCreators,loggedIn: req.session.loggedIn })
       })
       .catch(err => {
         console.log(err);
@@ -106,4 +101,11 @@ router.get('/topCommenters', (req, res) => {
     });
 });
 
+
+router.get('*', (req,res)=>{
+  console.log('======================');
+  res.render('search', {loggedIn: req.session.loggedIn })
+  
+  
+})
 module.exports = router;

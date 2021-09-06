@@ -1,10 +1,10 @@
-<div class="comments">
+<div class="comments p-1">
   {{#each this}}
-  <section class="comment">
+  <section class="flex w-auto comment bg-white bg-opacity-70 border rounded-lg pt-4">
     <div class="meta">
       {{user.username}} on {{format_date created_at}}
     </div>
-    <div class="text">
+    <div class="text pl-2">
       {{comment_text}}
     </div>
   </section>

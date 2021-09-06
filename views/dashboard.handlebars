@@ -1,13 +1,14 @@
-<section>
-  <h2>Create New Post</h2>
+<section class="dash bg-white bg-opacity-70 h-full rounded-b-md">
+<section class="pl-4">
+  <h2 class="text-xl font-extrabold text-blue-700 pt-4">Create New Post</h2>
 
-  <form class="new-post-form">
+  <form class="new-post-form pt-2 ">
     <div>
-      <label for="post-title">Title</label>
+      <label class=" text-blue-700 font-semibold" for="post-title">Title:</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
+      <label class=" text-blue-700 font-semibold" for="post-url">Link:</label>
       <input id="post-url" name="post-url" />
     </div>
     <div>
@@ -29,22 +30,22 @@
      <option value ="MySQL">MySQL</option>
      </select>
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn p-1 hover:bg-blue-900">Create</button>
   </form>
 </section>
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 class="pl-2 text-xl text-blue-700 font-extrabold">Your Posts:</h2>
   <ol>
     {{#each posts as |post|}}
-    <li>
+    <li class="list-item flex bg-white bg-opacity-30 p-1 ">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a class=" mt-4 rounded-md p-1 hover:bg-blue-800 bg-blue-200" href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
-
+</section>
 <script src="/javascript/add-post.js"></script>

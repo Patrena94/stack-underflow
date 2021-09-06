@@ -1,12 +1,20 @@
-<article class="post">
+<article
+  class="post mt-2 mr-2 w-auto shadow-lg mb-1 border hover:shadow-2xl p-2 rounded-tr-2xl rounded-bl-2xl bg-green-100 bg-opacity-90"
+>
   <div class="title">
     <a href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>&emsp14;{{language_name}} &emsp14;{{library_name}} &emsp14; by:  {{user.username}} on {{format_date created_at}}
   </div>
   <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+    {{vote_count}}
+    {{format_plural "point" vote_count}}
+    by
+    {{user.username}}
+    on
+    {{format_date created_at}}
     |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
 
