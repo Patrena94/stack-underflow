@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment, Vote } = require('../../models');
+const nodemailer = require('nodemailer');
+const { response } = require('express');
 
 // get all users
 router.get('/', (req, res) => {
@@ -103,6 +105,32 @@ router.post('/login', (req, res) => {
     });
   });
 });
+
+router.post('/:id', (req, res) => {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD
+    } 
+  });
+  
+  const mailOptions = {
+    from: process.env.EMAIL,
+    to: 'camilgrabowski95@gmail.com',
+    subject: 'Sending Email to reset password',
+    text: req.params.id  // 'url to reset password'
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+  res.json({msg:'I got an email'})
+})
 
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
