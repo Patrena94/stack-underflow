@@ -109,7 +109,9 @@ router.put('/Like', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
-      title: req.body.title
+      title: req.body.title,
+      language_name: req.body.language_name,
+      library_name: req.body.library_name
     },
     {
       where: {

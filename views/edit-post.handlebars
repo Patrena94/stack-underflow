@@ -9,11 +9,25 @@
       <input name="post-title" type="text" value="{{post.title}}" />
       <span>({{format_url post.post_url}})</span>
     </div>
+      {{!-- Language Dropdown code block --}}
     <div>
-      <select name="language-name" type="text" value="{{post.language_name}}"/>
+      <label for="language-name">Language</label>
+     <select name="language-name" id="language-name">
+      <option value="">{{post.language_name}}</option>   
+     <option value ="CSS">CSS</option> 
+     <option value="HTML">HTML</option> 
+     <option value="JavaScript">JavaScript</option>
+     </select>
     </div>
     <div>
-      <select name="library-name" type="text" value="{{post.library_name}}"/>
+      <label for="library-name">Library</label>
+     <select name="library-name" id="library-name">
+     <option value="">{{post.library_name}}</option>  
+     <option value ="Express">Express</option> 
+     <option value="Node">Node</option> 
+     <option value="Handlebars">Handlebars</option>
+     <option value ="MySQL">MySQL</option>
+     </select>
     </div>
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
