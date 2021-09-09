@@ -1,7 +1,6 @@
 <section class="dash bg-white bg-opacity-70 h-auto rounded-b-md">
 <section class="pl-4">
   <h2 class="text-xl font-extrabold text-blue-700 pt-4">Create New Post</h2>
-
   <form class="new-post-form pt-2 ">
     <div>
       <label class=" text-blue-700 font-semibold" for="post-title">Title:</label>
@@ -12,22 +11,22 @@
       <input id="post-url" name="post-url" />
     </div>
     <div>
-      <label for="language-name">Language</label>
-     <select name="language-name" id="language-name">
-    <option value="">Select One</option>   
-     <option value ="CSS">CSS</option> 
-     <option value="HTML">HTML</option> 
-     <option value="JavaScript">JavaScript</option>
-     </select>
+      <label class="font-semibold text-blue-700" for="language-name">Language:</label>
+      <select class="rounded-md border outline-none" name="language-name" id="language-name">
+        <option value="">Select One</option>   
+        <option value ="CSS">CSS</option> 
+        <option value="HTML">HTML</option> 
+        <option value="JavaScript">JavaScript</option>
+      </select>
     </div>
     <div>
-      <label for="library-name">Library</label>
-     <select name="library-name" id="library-name">
-     <option value="">Select One</option>  
-     <option value ="Express">Express</option> 
-     <option value="Node">Node</option> 
-     <option value="Handlebars">Handlebars</option>
-     <option value ="MySQL">MySQL</option>
+      <label class="font-semibold text-blue-700" for="library-name">Library:</label>
+      <select class="rounded-md border outline-none" name="library-name" id="library-name">
+        <option value="">Select One</option>  
+        <option value ="Express">Express</option> 
+        <option value="Node">Node</option> 
+        <option value="Handlebars">Handlebars</option>
+        <option value ="MySQL">MySQL</option>
      </select>
     </div>
     <button type="submit" class="btn p-1 hover:bg-blue-900">Create</button>
