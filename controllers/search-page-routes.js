@@ -3,12 +3,12 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote, Language } = require('../models');
-
+const withAuth = require('../utils/auth');
 
 
 
 // get all users
-router.get('/topCommenters', (req, res) => {
+router.get('/topCommenters', withAuth, (req, res) => {
     console.log('======================');
     User.findAll({
       attributes: [
@@ -34,7 +34,7 @@ router.get('/topCommenters', (req, res) => {
       });
   });
 
-  router.get('/topCreators', (req, res) => {
+  router.get('/topCreators', withAuth, (req, res) => {
     console.log('======================');
     User.findAll({
       attributes: [
@@ -61,7 +61,7 @@ router.get('/topCommenters', (req, res) => {
       });
   });
 
-  router.get('/usersPost/:userName', (req, res) => {
+  router.get('/usersPost/:userName', withAuth, (req, res) => {
   console.log('======================');
 
   Post.findAll({
@@ -102,7 +102,7 @@ router.get('/topCommenters', (req, res) => {
 });
 
 
-router.get('*', (req,res)=>{
+router.get('*', withAuth, (req,res)=>{
   console.log('======================');
   res.render('search', {loggedIn: req.session.loggedIn })
   
