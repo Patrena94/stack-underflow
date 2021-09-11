@@ -17,7 +17,7 @@ class Post extends Model {
           "post_url",
           "title",
           "library_name",
-          "languague_name",
+          "language_name",
           "created_at",
           [
             sequelize.literal(
