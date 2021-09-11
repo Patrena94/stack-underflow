@@ -66,6 +66,7 @@ router.post('/', (req, res) => {
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
+        req.session.email = dbUserData.email;
         req.session.loggedIn = true;
   
         res.json(dbUserData);
@@ -99,12 +100,16 @@ router.post('/login', (req, res) => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
+      req.session.email = dbUserData.email;
       req.session.loggedIn = true;
   
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
   });
 });
+
+
+
 
 router.post('/:id', (req, res) => {
   const transporter = nodemailer.createTransport({
@@ -117,9 +122,9 @@ router.post('/:id', (req, res) => {
   
   const mailOptions = {
     from: process.env.EMAIL,
-    to: 'camilgrabowski95@gmail.com',
+    to: req.body.email,
     subject: 'Sending Email to reset password',
-    text: req.params.id  // 'url to reset password'
+    text: 'http://localhost:3001/reset/' + req.params.id
   };
   
   transporter.sendMail(mailOptions, function(error, info){
@@ -131,6 +136,10 @@ router.post('/:id', (req, res) => {
   });
   res.json({msg:'I got an email'})
 })
+
+router.put('/reset', (req, res) => {
+  console.log(req.body);
+});
 
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {

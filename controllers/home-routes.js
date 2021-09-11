@@ -102,6 +102,11 @@ router.get('/signup', (req,res)=>{
     return;
   }
     res.render('signup');
+  });
+
+  router.get('/reset/:id', (req, res) => {
+    res.render('reset', {id:req.params.id});
+    
   })
 
 module.exports = router;
