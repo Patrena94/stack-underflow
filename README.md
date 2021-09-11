@@ -89,6 +89,6 @@ In order to test the application, the Contributor will need to initiate the appl
 ![image](https://user-images.githubusercontent.com/83892241/131598570-d13093c9-c880-44df-b553-f2df69963f12.png)
 ![image](https://user-images.githubusercontent.com/83892241/131598600-88012348-d603-4532-a6a8-7566b92dcc72.png)
 
-❤️ Developed by Akeem Clark, Camil Grabowski, Roselyn Dorsainvill, and Patrena Smith, LLC. 2021
+❤️ Developed by Akeem Clark, Camil Grabowski, Roz, and Patrena Smith, LLC. 2021
 
  
