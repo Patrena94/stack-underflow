@@ -40,7 +40,9 @@ User with questions about this project should contact the developers utilizing t
 
 # Usage
 The user will need to visit https://stack-underflo.herokuapp.com to review current post and to view the Top Creators, Commentors, and Search User Post.  The user will need to create an account in order to post or comment on a post.  The user can create an account by selecting Signup on the navigational bar or clicking on signup on the login page. 
-The user will be directed to enter a Username, Password, and email address.  The user will be directed to their personal dashboard where they may post a new comment.  The comment is saved to the website under the user’s dashboard as well as the homepage.  The member has the ability to delete or edit their own post.  In addition to commenting or voting on existing post. 
+The user will be directed to enter a Username, Password, and email address.  The user will be directed to their personal dashboard where they may post a new comment.  The comment is saved to the website under the user’s dashboard as well as the homepage.  The member has the ability to delete or edit their own post.  In addition to commenting or voting on existing post. The user has the ability to click on the post weblink to be directed to an external website to view the subject matter, as well as to review additional comments submitted by user to the post. 
+
+After a successful log in the session will expire after five minutes. 
 
 Users and Contributors may review a walk-through video of the above description by clicking the Screencastify link below:
 
