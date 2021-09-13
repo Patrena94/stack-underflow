@@ -49,7 +49,7 @@ Users and Contributors may review a walk-through video of the above description 
 
 Heroku walk through video:
 
-https://drive.google.com/file/d/11KtUry0xcvOsMTieQQiEJI0lpVUaxkBu/view
+https://drive.google.com/file/d/15oFk7FdGUaPkA9-aur-9JRCXtJNYHclv/view
 
 # Heroku
 The application has been deployed utilizing Heroku. Please review the application utilzing the below link.
@@ -63,10 +63,12 @@ The contributor will need seek permission from the developers. Upon approval the
 In order to test the application, the Contributor will need to initiate the application by typing into the command line mysql -u root -p.  The contributor will be prompted to enter their password. The contributor should ensure that the following applications are installed express-handlebars (npm i express-handlebars); MySQL2 and Sequelize (npm i sequelize mysql2); dotenv (npm i dotenv); bcrypt (npm i bcrypt); express-session (npm i express-session); connect-session-sequelize (npm i connect-session-sequelize). In addition to, standard express (npm I express); inquirer (npm i inquirer); and (npm init -y).  The contributor will need to add jawdb to the Heroku file to deploy the application. 
 
 # Screenshots
-![image](https://user-images.githubusercontent.com/83892241/131596909-30c2dc88-938d-4bdb-a7ad-2e26499a7ca9.png)
-![image](https://user-images.githubusercontent.com/83892241/131597391-5c0cb7a9-e28a-4c54-8871-ac008b42e821.png)
-![image](https://user-images.githubusercontent.com/83892241/131597446-1ca5eff0-0298-4077-985f-164f2465b04f.png)
-![image](https://user-images.githubusercontent.com/83892241/131597572-ae800bb2-b9e3-455e-8453-5b95f0055f08.png)
+![image](https://user-images.githubusercontent.com/83892241/133006434-e421dc5a-48e3-4811-9101-e768593a1e19.png)
+![image](https://user-images.githubusercontent.com/83892241/133006463-88e30e2d-6f0c-4574-9358-a160930847f6.png)
+![image](https://user-images.githubusercontent.com/83892241/133006500-1636890a-d1ea-40c7-908f-113da551d8c7.png)
+![image](https://user-images.githubusercontent.com/83892241/133006552-53caa13d-6b82-4cb5-9030-b092139d3190.png)
+![image](https://user-images.githubusercontent.com/83892241/133006581-3c52a1ed-2930-4d38-8d5a-3892562f4b8b.png)
+![image](https://user-images.githubusercontent.com/83892241/133006603-cb8af7c5-3ed8-4075-a3ed-239ecb75925b.png)
 ![image](https://user-images.githubusercontent.com/83892241/131597603-b4c8c086-ee6e-42dd-a4e2-42216e216c56.png)
 ![image](https://user-images.githubusercontent.com/83892241/131597691-9910e9d7-2be8-4f7c-8167-aa35d9e2e95a.png)
 ![image](https://user-images.githubusercontent.com/83892241/131597758-82622781-fee8-4a21-b1b9-1bfbe1beadf9.png)
